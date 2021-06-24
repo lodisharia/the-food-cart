@@ -1,0 +1,15 @@
+{
+  "name": "the-food-kart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lodisharia/the-food-cart.git",
+  "author": "LiziO",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "nodemon": "^2.0.7"
+  }
+}
