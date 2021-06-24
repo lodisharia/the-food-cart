@@ -4,8 +4,7 @@ export default function Header() {
     return (
         <div className = 'header'>
             <div className = 'headerTitles'>
-                <span className = 'headerTitleOne'>Blog1</span>
-                <span className = 'headerTitleTwo'>Blog2</span>
+                <span className = 'headerTitle'>The Food Cart</span>
             </div>
             <img 
             className = 'headerImage'

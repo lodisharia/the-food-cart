@@ -8,17 +8,12 @@
     align-items: center;
     font-family: 'Playfair Display', serif;
     color: #444
+    
 }
 
-.headerTitleOne{
+.headerTitle{
     position: absolute;
-    top: 18%;
-    font-size: 20px;
-}
-
-.headerTitleTwo{
-    position: absolute;
-    top: 20%;
+    top: 10%;
     font-size: 100px;
 }
 
