@@ -5,6 +5,8 @@
 .singlePostWrapper{
     padding: 20px;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .singlePostImage{
@@ -16,6 +18,12 @@
 
 .singlePostTitle{
     text-align: center;
+    margin: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
+
+.singlePostTitleInput{
     margin: 20px;
     font-family: 'Roboto Mono', monospace;
     font-size: 30px;
@@ -43,4 +51,23 @@
     font-size: 18px;
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 25px;
+}
+
+.singlePostDescInput{
+    border: none;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 25px;
+}
+
+.singlePostButton{
+    width: 100px;
+    border: none;
+    background-color: teal;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 20px;
 }

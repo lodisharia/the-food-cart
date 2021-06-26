@@ -12,7 +12,7 @@ export default function Post({post}){
             )}
             <div className = 'postInfo'>
                 <div className = 'postCategories'>{
-                    post.categories.map(c=>(
+                    post.categories.map((c)=>(
                         <span className = 'postCategory'>{c.name}</span>
                     ))
                 }

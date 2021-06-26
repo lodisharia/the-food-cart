@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 export default function Register() {
-    const [username,setUsername] = useState('')
-    const [email,setEmail] = useState('')
-    const [password,setPassword] = useState('')
-    const [error,setError] = useState(false)
+    const [username,setUsername] = useState('');
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
+    const [error,setError] = useState(false);
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
@@ -15,7 +15,7 @@ export default function Register() {
         const res = await axios.post('/auth/register',{
             username,
             email,
-            password
+            password,
         });
         res.data &&  window.location.replace('/login');
     }catch(err){
@@ -29,15 +29,15 @@ export default function Register() {
                 <label>Username</label>
                 <input type = 'text' className = 'registerInput'
                 placeholder='Enter your username'
-                onChange={e=>setUsername(e.target.value)}></input>
+                onChange={(e)=>setUsername(e.target.value)}></input>
                 <label>Email</label>
                 <input type = 'text' className = 'registerInput'
                 placeholder='Enter your email'
-                onChange={e=>setEmail(e.target.value)}></input>
+                onChange={(e)=>setEmail(e.target.value)}></input>
                 <label>Password</label>
                 <input type = 'password' className = 'registerInput'
                 placeholder='Enter your password'
-                onChange={e=>setPassword(e.target.value)}></input>
+                onChange={(e)=>setPassword(e.target.value)}></input>
                 <button className = 'registerButton' type='submit'>Sign Up</button>
             </form>
             <button className = 'registerLoginButton'><Link className = 'link' to = '/login'>Log In</Link></button>
