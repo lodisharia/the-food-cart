@@ -16,7 +16,7 @@ export default function Login() {
                 username: userRef.current.value,
                 password: passwordRef.current.value,
             })
-            dispatch({type:"LOGIN_SUCESS", payload: res.data});
+            dispatch({type:"LOGIN_SUCCESS", payload: res.data});
         }catch(err){
             dispatch({type:"LOGIN_FAILURE"});
         }

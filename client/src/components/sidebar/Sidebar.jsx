@@ -12,11 +12,12 @@ export default function Sidebar() {
             const res = await axios.get('/categories')
             setCategories(res.data)
         }
+        getCategories();
     },[])
     return (
         <div className = 'sidebar'>
             <div className = 'sidebarItem'>
-                <span className = 'sidebarTitle'>About Me</span>
+                <span className = 'sidebarTitle'>About Us</span>
                 <img className = 'descPhoto' src = 'https://i.pinimg.com/originals/64/18/af/6418aff010f67dcb5690fd8d16add93d.jpg'></img>
                 <p>
                     Sharing recipes, tips, ideas and most importantly - experiences,

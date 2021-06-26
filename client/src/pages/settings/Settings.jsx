@@ -1,6 +1,6 @@
 import './settings.css'
 import Sidebar from '../../components/sidebar/Sidebar'
-import { useContext, useRef, useState } from 'react'
+import { useContext, useState } from 'react'
 import { Context } from '../../context/Context'
 import axios from 'axios'
 
@@ -15,7 +15,7 @@ export default function Settings() {
     const PF = 'http://localhost:5000/images/'
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        dispatch({type:"UPDATE_START"})
+        dispatch({type:"UPDATE_START"});
         const updatedUser = {
             userId: user._id,
             username,
@@ -53,25 +53,25 @@ export default function Settings() {
                     <label>Profile Picture</label>
                     <div className = 'settingsProfilePic'>
                         <img
-                        src = {file ? URL.createObjectURL(file) : PF + user.profilePic}>
+                        src = {file ? URL.createObjectURL(file) : PF+user.profilePic}>
 
                         </img>
                         <label htmlFor = 'fileInput'>
-                        <i class=" settingsProfilePicIcon fas fa-user-circle"></i>
+                        <i className=" settingsProfilePicIcon fas fa-user-circle"></i>
                         </label>
                         <input type = 'file' id = 'fileInput' style = {{display: 'none'}}
-                    onChange={e=>setFile(e.target.files[0])}></input>
+                    onChange={(e)=>setFile(e.target.files[0])}></input>
                     </div>
                     <label>Username</label>
                     <input type = 'text' placeholder = {user.username}
-                    onChange = {e=>setUsername(e.target.value)}></input>
+                    onChange = {(e)=>setUsername(e.target.value)}></input>
                     <label>Email</label>
                     <input type = 'text' placeholder = {user.email}
-                    onChange = {e=>setEmail(e.target.value)}></input>
+                    onChange = {(e)=>setEmail(e.target.value)}></input>
                     <label>Password</label>
                     <input type = 'password'
-                    onChange = {e=>setPassword(e.target.value)}></input>
-                    <button class = 'settingsSubmit' type='submit'>Update</button>
+                    onChange = {(e)=>setPassword(e.target.value)}></input>
+                    <button className = 'settingsSubmit' type='submit'>Update</button>
                 {success &&(
                     <span style = {{color:'green'}}>Your profile has been successfully updated</span>
                 )}

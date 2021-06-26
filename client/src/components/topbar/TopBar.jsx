@@ -17,7 +17,7 @@ export default function TopBar() {
           <li className = 'topListItem'><Link to = '/' className = 'link'>Home</Link></li>
           <li className = 'topListItem'><Link to = '/write' className = 'link'>Write</Link></li>
           <li className = 'topListItem' onClick={handleLogout}>
-            {user && 'LOGOUT'}
+            {user && 'Log Out'}
           </li>
         </ul>
       </div>
@@ -37,7 +37,6 @@ export default function TopBar() {
             </ul>
           )
         }
-        <i className="searchIcon fas fa-search"></i>
       </div>
     </div>
   )
